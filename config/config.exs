@@ -7,9 +7,6 @@
 # General application configuration
 use Mix.Config
 
-config :makeup_live,
-  ecto_repos: [MakeupLive.Repo]
-
 # Configures the endpoint
 config :makeup_live, MakeupLiveWeb.Endpoint,
   url: [host: "localhost"],

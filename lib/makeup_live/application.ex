@@ -8,8 +8,6 @@ defmodule MakeupLive.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      MakeupLive.Repo,
       # Start the endpoint when the application starts
       MakeupLiveWeb.Endpoint
       # Starts a worker by calling: MakeupLive.Worker.start_link(arg)
