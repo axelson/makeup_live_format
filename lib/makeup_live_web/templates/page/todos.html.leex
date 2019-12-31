@@ -1,0 +1,8 @@
+<h1>Makeup Live Formatter</h1>
+<form action="#" phx-submit="text-update">
+  <%= textarea :source, :text, placeholder: "Input Elixir source code" %>
+  <%= submit "Submit", phx_disable_with: "Formatting..." %>
+</form>
+
+<h2>Rendered</h2>
+<%= raw(assigns[:highlighted]) %>
