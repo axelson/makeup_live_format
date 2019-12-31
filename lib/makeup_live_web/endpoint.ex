@@ -2,7 +2,7 @@ defmodule MakeupLiveWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :makeup_live
 
   socket "/socket", MakeupLiveWeb.UserSocket,
-    websocket: true,
+    websocket: [timeout: 45_000],
     longpoll: false
 
   socket "/live", Phoenix.LiveView.Socket
