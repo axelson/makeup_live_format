@@ -15,7 +15,10 @@ config :makeup_live, MakeupLiveWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cWT5GRJqD2MEmsQfeK86J2HgmZxi6YA/Fx/Y8wjhRnnAVZO0uJz+aI+2Nsck71dF",
   render_errors: [view: MakeupLiveWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: MakeupLive.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: MakeupLive.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "NpREzhguz87xA0eEUC6IcMT2PLRDIuCw"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

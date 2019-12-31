@@ -22,6 +22,7 @@ defmodule MakeupLiveWeb do
       use Phoenix.Controller, namespace: MakeupLiveWeb
 
       import Plug.Conn
+      import Phoenix.LiveView.Controller
       import MakeupLiveWeb.Gettext
       alias MakeupLiveWeb.Router.Helpers, as: Routes
     end
@@ -38,6 +39,17 @@ defmodule MakeupLiveWeb do
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
+
+      import Phoenix.LiveView,
+        only: [
+          live_render: 2,
+          live_render: 3,
+          live_link: 1,
+          live_link: 2,
+          live_component: 2,
+          live_component: 3,
+          live_component: 4
+        ]
 
       import MakeupLiveWeb.ErrorHelpers
       import MakeupLiveWeb.Gettext
