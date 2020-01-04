@@ -11,6 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :makeup_live, MakeupLiveWeb.Endpoint,
   url: [host: "makeup-live-format.herokuapp.com", port: 443],
+  server: true,
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
