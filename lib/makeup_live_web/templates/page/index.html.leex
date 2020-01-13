@@ -2,9 +2,13 @@
 
 <div class="ml-container">
   <div>
-    <form action="#" phx-submit="text-update">
-      <%= textarea :source, :text, placeholder: "Input Elixir source code", class: "ml-textarea" %>
-      <%= submit "Submit", phx_disable_with: "Formatting..." %>
+    <form action="#" phx-change="text-update" phx-submit="text-update">
+      <%= textarea :source,
+          :text,
+          placeholder: "Input Elixir source code",
+          class: "ml-textarea",
+          autofocus: true,
+          value: assigns[:user_text] %>
     </form>
   </div>
 
