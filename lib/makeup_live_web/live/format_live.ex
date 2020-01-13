@@ -32,7 +32,7 @@ defmodule MakeupLiveWeb.FormatLive do
 
   defp initial_text do
     """
-    defmodule ExampleModule
+    defmodule ExampleModule do
       def hello do
         IO.puts("Hello World")
       end
