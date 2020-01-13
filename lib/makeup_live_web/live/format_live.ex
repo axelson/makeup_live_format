@@ -3,8 +3,10 @@ defmodule MakeupLiveWeb.FormatLive do
   alias MakeupLiveWeb.PageView
 
   def mount(_session, socket) do
+    text = initial_text()
+
     assigns = %{
-      highlighted: "",
+      highlighted: Makeup.highlight(text),
       user_text: initial_text()
     }
 
