@@ -18,6 +18,5 @@ defmodule MakeupLiveWeb.Router do
     pipe_through :browser
 
     live "/",  FormatLive
-    get "/makeup", PageController, :makeup
   end
 end
