@@ -17,12 +17,7 @@ defmodule MakeupLiveWeb.Router do
   scope "/", MakeupLiveWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/",  FormatLive
     get "/makeup", PageController, :makeup
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", MakeupLiveWeb do
-  #   pipe_through :api
-  # end
 end

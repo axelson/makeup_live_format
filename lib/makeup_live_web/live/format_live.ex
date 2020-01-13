@@ -14,6 +14,6 @@ defmodule MakeupLiveWeb.FormatLive do
   end
 
   def render(assigns) do
-    PageView.render("todos.html", assigns)
+    PageView.render("index.html", assigns)
   end
 end
