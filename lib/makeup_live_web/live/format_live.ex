@@ -14,7 +14,7 @@ defmodule MakeupLiveWeb.FormatLive do
   end
 
   def handle_event("text-update", %{"source" => %{"text" => text}}, socket) do
-    highlighted = Makeup.highlight(text)
+    highlighted = text |> String.replace("\r\n", "\n") |> Makeup.highlight()
 
     assigns = %{
       highlighted: highlighted,
