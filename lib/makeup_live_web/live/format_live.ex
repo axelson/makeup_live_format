@@ -7,7 +7,7 @@ defmodule MakeupLiveWeb.FormatLive do
 
     assigns = %{
       highlighted: Makeup.highlight(text),
-      user_text: initial_text()
+      user_text: text
     }
 
     {:ok, assign(socket, assigns)}
