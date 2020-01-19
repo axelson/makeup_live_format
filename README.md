@@ -4,6 +4,8 @@ An easy way to view highlighted Elixir source code in your browser.
 
 ![Website screenshot](screenshot.png)
 
+Visit the website at: https://makeup-live-format.herokuapp.com/
+
 # Development
 
 To start your Phoenix server:
