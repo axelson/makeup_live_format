@@ -2,7 +2,7 @@ defmodule MakeupLiveWeb.FormatLive do
   use Phoenix.LiveView
   alias MakeupLiveWeb.PageView
 
-  def mount(_session, socket) do
+  def mount(_params, _session, socket) do
     text = initial_text()
 
     assigns = %{
