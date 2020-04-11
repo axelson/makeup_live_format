@@ -7,7 +7,7 @@
           placeholder: "Input Elixir source code",
           class: "ml-textarea",
           autofocus: true,
-          value: assigns[:user_text] %>
+          value: assigns[:user_text], phx_debounce: "150" %>
     </form>
   </div>
 
