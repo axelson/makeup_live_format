@@ -33,17 +33,17 @@ defmodule MakeupLive.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.11"},
-      {:phoenix_pubsub, "~> 1.1"},
-      {:phoenix_live_view, "~> 0.11.0"},
+      {:phoenix, "~> 1.5.0"},
+      {:phoenix_pubsub, "~> 2.0"},
+      {:phoenix_live_view, "~> 0.15.2"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:makeup_elixir, "~> 0.14.0"},
       {:makeup, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
       {:priv_check, "~> 0.2.2", only: [:dev, :test], runtime: false}
+      {:plug_cowboy, "~> 2.1"},
     ]
   end
 
