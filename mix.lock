@@ -19,5 +19,6 @@
   "plug_crypto": {:hex, :plug_crypto, "1.2.0", "1cb20793aa63a6c619dd18bb33d7a3aa94818e5fd39ad357051a67f26dfa2df6", [:mix], [], "hexpm", "a48b538ae8bf381ffac344520755f3007cc10bd8e90b240af98ea29b69683fc2"},
   "priv_check": {:hex, :priv_check, "0.2.2", "9b75b59882b27525c8ac58b963d1b9a97bb1274590ecdb8853bf194c0d091648", [:mix], [], "hexpm", "ebfbd7b78faab453b7bf053e940313309fc4eef56a38c8e0afd0d7b22939199c"},
   "ranch": {:hex, :ranch, "1.7.1", "6b1fab51b49196860b733a49c07604465a47bdb78aa10c1c16a3d199f7f8c881", [:rebar3], [], "hexpm", "451d8527787df716d99dc36162fca05934915db0b6141bbdac2ea8d3c7afc7d7"},
+  "ring_logger": {:hex, :ring_logger, "0.8.0", "b1baddc269099b2afe2ea3a87b8e2b71e57331c0000038ae55090068aac679db", [:mix], [], "hexpm", "9b2f482e4346c13c11ef555f898202d0ddbfda6e2354e5c6e0559d2b4e0cf781"},
   "telemetry": {:hex, :telemetry, "0.4.2", "2808c992455e08d6177322f14d3bdb6b625fbcfd233a73505870d8738a2f4599", [:rebar3], [], "hexpm", "2d1419bd9dda6a206d7b5852179511722e2b18812310d304620c7bd92a13fcef"},
 }

@@ -42,8 +42,12 @@ defmodule MakeupLive.MixProject do
       {:makeup, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:priv_check, "~> 0.2.2", only: [:dev, :test], runtime: false}
       {:plug_cowboy, "~> 2.1"},
+      {:priv_check, "~> 0.2.2", only: [:dev, :test], runtime: false},
+      {:ring_logger, "~> 0.8"},
+      # {:exsync, path: "~/dev/forks/exsync"}
+      # {:cortex, "~> 0.6.0", only: [:dev, :test]}
+      {:cortex, path: "~/dev/forks/cortex", only: [:dev, :test]}
     ]
   end
 
