@@ -49,4 +49,6 @@ defmodule MakeupLiveWeb.Endpoint do
   plug Plug.Session, @session_options
 
   plug MakeupLiveWeb.Router
+
+  def session_options, do: @session_options
 end
