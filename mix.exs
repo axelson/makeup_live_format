@@ -36,8 +36,8 @@ defmodule MakeupLive.MixProject do
     [
       {:phoenix, "~> 1.5.0"},
       {:phoenix_pubsub, "~> 2.0"},
-      {:phoenix_live_view, "~> 0.15.2"},
-      {:phoenix_html, "~> 2.11"},
+      {:phoenix_live_view, "~> 0.16.0"},
+      {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:makeup_elixir, "~> 0.15.0"},
       {:makeup, "~> 1.0"},

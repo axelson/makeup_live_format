@@ -22,7 +22,7 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-config :logger, backends: [RingLogger]
+# config :logger, backends: [RingLogger]
 # config :logger, backends: [ExSync.Logger]
 
 # Use Jason for JSON parsing in Phoenix
