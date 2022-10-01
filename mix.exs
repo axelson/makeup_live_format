@@ -39,7 +39,7 @@ defmodule MakeupLive.MixProject do
       {:phoenix_live_view, "~> 0.17.5"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:makeup_elixir, "~> 0.15.0"},
+      {:makeup_elixir, "~> 0.16.0"},
       {:makeup, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
