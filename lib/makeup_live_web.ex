@@ -40,7 +40,7 @@ defmodule MakeupLiveWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import Phoenix.LiveView.Helpers
+      import Phoenix.Component
 
       import MakeupLiveWeb.ErrorHelpers
       import MakeupLiveWeb.Gettext

@@ -8,7 +8,6 @@ defmodule MakeupLive.MixProject do
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
       # compilers: [:priv_check, :phoenix, :gettext] ++ Mix.compilers(),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps()
@@ -34,11 +33,12 @@ defmodule MakeupLive.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.6.0"},
+      {:phoenix, "1.7.0-rc.2", override: true},
       {:phoenix_pubsub, "~> 2.0"},
-      {:phoenix_live_view, "~> 0.17.5"},
+      {:phoenix_live_view, "~> 0.18.3"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix_view, "~> 2.0"},
       {:makeup_elixir, "~> 0.16.0"},
       {:makeup, "~> 1.0"},
       {:gettext, "~> 0.11"},
