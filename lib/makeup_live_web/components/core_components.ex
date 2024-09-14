@@ -354,12 +354,7 @@ defmodule MakeupLiveWeb.CoreComponents do
     ~H"""
     <div>
       <.label for={@id}><%= @label %></.label>
-      <textarea
-        id={@id}
-        name={@name}
-        class={@class}
-        {@rest}
-      ><%= Phoenix.HTML.Form.normalize_value("textarea", @value) %></textarea>
+      <textarea id={@id} name={@name} class={@class} {@rest}><%= Phoenix.HTML.Form.normalize_value("textarea", @value) %></textarea>
       <.error :for={msg <- @errors}><%= msg %></.error>
     </div>
     """

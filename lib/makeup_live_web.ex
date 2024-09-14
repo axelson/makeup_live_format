@@ -41,6 +41,7 @@ defmodule MakeupLiveWeb do
       use Phoenix.Controller,
         formats: [:html, :json],
         layouts: [html: MakeupLiveWeb.Layouts]
+
       use Gettext, backend: MakeupLiveWeb.Gettext
 
       import Plug.Conn
