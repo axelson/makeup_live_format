@@ -41,9 +41,9 @@ defmodule MakeupLiveWeb do
       use Phoenix.Controller,
         formats: [:html, :json],
         layouts: [html: MakeupLiveWeb.Layouts]
+      use Gettext, backend: MakeupLiveWeb.Gettext
 
       import Plug.Conn
-      import MakeupLiveWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -81,11 +81,11 @@ defmodule MakeupLiveWeb do
 
   defp html_helpers do
     quote do
+      use Gettext, backend: MakeupLiveWeb.Gettext
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
       import MakeupLiveWeb.CoreComponents
-      import MakeupLiveWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

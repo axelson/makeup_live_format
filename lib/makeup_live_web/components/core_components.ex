@@ -15,9 +15,9 @@ defmodule MakeupLiveWeb.CoreComponents do
   Icons are provided by [heroicons](https://heroicons.com). See `icon/1` for usage.
   """
   use Phoenix.Component
+  use Gettext, backend: MakeupLiveWeb.Gettext
 
   alias Phoenix.LiveView.JS
-  import MakeupLiveWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -293,7 +293,9 @@ defmodule MakeupLiveWeb.CoreComponents do
                 multiple pattern placeholder readonly required rows size step)
 
   def input(%{field: %Phoenix.HTML.FormField{} = field} = assigns) do
-    errors = if Phoenix.Component.used_input?(field), do: field.errors, else: []
+    # FIXME: We can probably bring this back with Phoenix LiveView 1.0
+    # errors = if Phoenix.Component.used_input?(field), do: field.errors, else: []
+    errors = field.errors
 
     assigns
     |> assign(field: nil, id: assigns.id || field.id)
