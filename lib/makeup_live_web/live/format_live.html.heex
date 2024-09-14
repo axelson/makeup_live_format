@@ -2,12 +2,15 @@
   <div>
     <h2>Enter text here</h2>
     <form action="#" phx-change="text-update" phx-submit="text-update">
-      <%= textarea :source,
-          :text,
-          placeholder: "Input Elixir source code",
-          class: "ml-textarea",
-          autofocus: true,
-          value: assigns[:user_text], phx_debounce: "150" %>
+      <.input
+        type="textarea"
+        name="main-textarea"
+        placeholder="Input Elixir source code"
+        class="ml-textarea"
+        autofocus="true"
+        value={@user_text}
+        phx_debounce="150"
+      />
     </form>
   </div>
 

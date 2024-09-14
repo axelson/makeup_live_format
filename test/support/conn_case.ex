@@ -12,20 +12,22 @@ defmodule MakeupLiveWeb.ConnCase do
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
   by setting `use MakeupLiveWeb.ConnCase, async: true`, although
-  this option is not recommendded for other databases.
+  this option is not recommended for other databases.
   """
 
   use ExUnit.CaseTemplate
 
   using do
     quote do
+      # The default endpoint for testing
+      @endpoint MakeupLiveWeb.Endpoint
+
+      use MakeupLiveWeb, :verified_routes
+
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      alias MakeupLiveWeb.Router.Helpers, as: Routes
-
-      # The default endpoint for testing
-      @endpoint MakeupLiveWeb.Endpoint
+      import MakeupLiveWeb.ConnCase
     end
   end
 

@@ -7,15 +7,13 @@ defmodule MakeupLiveWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_makeup_live_key",
-    signing_salt: "omuVV0t5"
+    signing_salt: "y7+XGLRN",
+    same_site: "Lax"
   ]
 
-  socket "/socket", MakeupLiveWeb.UserSocket,
-    websocket: [timeout: 45_000],
-    longpoll: false
-
   socket "/live", Phoenix.LiveView.Socket,
-    websocket: [connect_info: [session: @session_options]]
+    websocket: [connect_info: [session: @session_options]],
+    longpoll: [connect_info: [session: @session_options]]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -25,7 +23,7 @@ defmodule MakeupLiveWeb.Endpoint do
     at: "/",
     from: :makeup_live,
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: MakeupLiveWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -45,10 +43,6 @@ defmodule MakeupLiveWeb.Endpoint do
 
   plug Plug.MethodOverride
   plug Plug.Head
-
   plug Plug.Session, @session_options
-
   plug MakeupLiveWeb.Router
-
-  def session_options, do: @session_options
 end

@@ -1,4 +1,2 @@
-elixir 1.14.3-otp-25
-erlang 25.2.3
-# Note: this project is not currently compatible with nodejs 18.15.0
-nodejs 16.19.1
+elixir 1.17.2-otp-26
+erlang 27.0.1

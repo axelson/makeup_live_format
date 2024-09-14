@@ -1,6 +1,8 @@
 defmodule MakeupLiveWeb.FormatLive do
+  require Logger
   use Phoenix.LiveView
-  alias MakeupLiveWeb.PageView
+  import Phoenix.HTML
+  import MakeupLiveWeb.CoreComponents
 
   def mount(_params, _session, socket) do
     text = initial_text()
@@ -13,7 +15,8 @@ defmodule MakeupLiveWeb.FormatLive do
     {:ok, assign(socket, assigns)}
   end
 
-  def handle_event("text-update", %{"source" => %{"text" => text}}, socket) do
+  def handle_event("text-update", params, socket) do
+    %{"main-textarea" => text} = params
     # Work around https://github.com/tmbb/makeup/issues/29
     highlighted = text |> String.replace("\r\n", "\n") |> Makeup.highlight()
 
@@ -27,8 +30,9 @@ defmodule MakeupLiveWeb.FormatLive do
     {:noreply, socket}
   end
 
-  def render(assigns) do
-    PageView.render("index.html", assigns)
+  def handle_event(event, params, socket) do
+    Logger.warning("Unhandled event #{inspect(event)} with params #{inspect(params)}")
+    {:noreply, socket}
   end
 
   defp initial_text do
