@@ -45,8 +45,7 @@ defmodule MakeupLive.MixProject do
       # {:exsync, path: "~/dev/forks/exsync"}
       # {:cortex, "~> 0.6.0", only: [:dev, :test]}
       # {:cortex, path: "~/dev/forks/cortex", only: [:dev, :test]},
-      # TODO bump on release to {:phoenix_live_view, "~> 1.0.0"},
-      {:phoenix_live_view, "~> 1.0.0-rc.1", override: true},
+      {:phoenix_live_view, "~> 0.20.17"},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
